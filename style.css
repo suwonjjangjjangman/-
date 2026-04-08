@@ -194,8 +194,8 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 /* Slide text content — centered, bottom 35% */
 .hero-slide-content {
     position: absolute; inset: 0; z-index: 10;
-    display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-    padding-bottom: 13%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding-bottom: 8%;
     text-align: center;
     color: var(--clr-white);
 }
@@ -205,6 +205,7 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     text-shadow: 0 3px 20px rgba(0,0,0,0.55);
     margin-bottom: 1rem;
     color: var(--clr-white);
+    word-break: keep-all;
 }
 .hero-sub {
     font-size: 1.05rem; font-weight: 400;
@@ -667,4 +668,9 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     .hero-title { font-size: 2.5rem; margin-bottom: 1rem; }
     .hero-desc { font-size: 1rem; }
     .notice-table { display: block; overflow-x: auto; white-space: nowrap; }
+
+    /* Hero slide mobile */
+    .hero-slide-content { justify-content: center; padding-bottom: 0; padding: 0 1.5rem; }
+    .hero-main { font-size: 1.9rem; line-height: 1.45; }
+    .hero-sub { font-size: 0.9rem; padding: 0 0.5rem; }
 }
