@@ -552,6 +552,15 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     to   { background-position: -200% 0; }
 }
 
+/* RF 제품 실제 사진 */
+#showcase-rf-bg {
+    background-image: url('./assets/rf-sector.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#showcase-rf-bg::before { display: none; }
+#showcase-rf-bg .prod-showcase-icon { display: none; }
+
 /* Icon inside placeholder */
 .prod-showcase-icon {
     width: 72px;
