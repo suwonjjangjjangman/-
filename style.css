@@ -178,7 +178,14 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 }
 
 /* --- HOME PAGE COMPONENTS --- */
-.hero { position: relative; height: calc(100vh - 80px); overflow: hidden; }
+/* PC: 16:9 비율 */
+.hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: calc(100vh - 80px);
+    overflow: hidden;
+}
 
 /* Slider slides */
 .hero-slide {
@@ -188,7 +195,8 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 }
 .hero-slide.active { opacity: 1; pointer-events: auto; }
 
-.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 1; }
+.hero-bg { position: absolute; inset: 0; z-index: 1; }
+.hero-bg-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .hero-overlay { position: absolute; inset: 0; background: rgba(10, 25, 47, 0.45); z-index: 2; }
 
 /* Slide text content — centered, bottom 35% */
@@ -680,6 +688,10 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 
     /* Hero slide mobile */
     .hero-slide-content { justify-content: center; padding-bottom: 0; padding: 0 1.5rem; }
-    .hero-main { font-size: 1.9rem; line-height: 1.45; }
+    .hero-main { font-size: 1.9rem; line-height: 1.45; word-break: keep-all; }
     .hero-sub { font-size: 0.9rem; padding: 0 0.5rem; }
+
+    /* 모바일: 9:16 비율 */
+    .hero { aspect-ratio: 9 / 16; max-height: none; }
+    .hero-bg-img { object-position: center 30%; }
 }
