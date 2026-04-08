@@ -77,7 +77,8 @@
             <div class="hero hero-slider">
                 <!-- 슬라이드 1 : 육해공 방산 -->
                 <div class="hero-slide active">
-                    <div class="hero-bg" style="background-image: url('assets/hero1.jpg');"></div>
+                    <div class="hero-bg hero-bg--pc" style="background-image: url('assets/hero1.jpg');"></div>
+                    <div class="hero-bg hero-bg--mobile" style="background-image: url('assets/mobilemainphoto1.jpg');"></div>
                     <div class="hero-overlay"></div>
                     <div class="hero-slide-content">
                         <h2 class="hero-main">육·해·공 방위산업의 핵심 부품,<br>신화테크놀러지가 만듭니다</h2>
@@ -87,7 +88,8 @@
                 </div>
                 <!-- 슬라이드 2 : MCT 정밀가공 -->
                 <div class="hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/hero2.jpg');"></div>
+                    <div class="hero-bg hero-bg--pc" style="background-image: url('assets/hero2.jpg');"></div>
+                    <div class="hero-bg hero-bg--mobile" style="background-image: url('assets/mobilemainphoto2.jpg');"></div>
                     <div class="hero-overlay"></div>
                     <div class="hero-slide-content">
                         <h2 class="hero-main">마이크로미터 단위의 정밀도,<br>오차 없는 가공 기술</h2>
@@ -97,7 +99,8 @@
                 </div>
                 <!-- 슬라이드 3 : RF 부품 -->
                 <div class="hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/hero3.jpg');"></div>
+                    <div class="hero-bg hero-bg--pc" style="background-image: url('assets/hero3.jpg');"></div>
+                    <div class="hero-bg hero-bg--mobile" style="background-image: url('assets/mobilemainphoto3.jpg');"></div>
                     <div class="hero-overlay"></div>
                     <div class="hero-slide-content">
                         <h2 class="hero-main">3kHz ~ 20GHz,<br>RF 부품 설계부터 납품까지</h2>
@@ -407,82 +410,102 @@
                     <span class="en-sub">Products</span>
                 </div>
             </div>
+
+            <!-- 대분류 탭: 정밀가공 / RF 제품 -->
             <div class="page-tabs-bar">
                 <div class="container">
                     <div class="page-tabs" style="margin-bottom: 0; border-bottom: none;">
-                        <div class="page-tab active" data-target="machining">정밀가공 갤러리</div>
-                        <div class="page-tab" data-target="rf">RF 갤러리</div>
+                        <div class="page-tab active" data-target="machining">정밀가공 제품</div>
+                        <div class="page-tab" data-target="rf">RF 제품</div>
                     </div>
                 </div>
             </div>
 
             <div class="container section-padding">
 
+                <!-- ── 정밀가공 탭 ── -->
                 <div class="tab-content active" data-tab="machining">
-                    <div class="prod-grid fade-up mt-large">
-                        <div class="prod-card">
-                            <div class="prod-img">
-                                <span class="prod-tag">MCT 가공</span>
-                                <i data-lucide="box"></i>
+
+                    <!-- 소카테고리 탭 -->
+                    <div class="prod-cat-tabs fade-up">
+                        <button class="prod-cat-tab active" data-cat="mct">MCT 가공</button>
+                        <button class="prod-cat-tab" data-cat="cnc">CNC 가공</button>
+                        <button class="prod-cat-tab" data-cat="5axis">5축 가공</button>
+                        <button class="prod-cat-tab" data-cat="nc">NC 가공</button>
+                        <button class="prod-cat-tab" data-cat="etching">에칭 가공</button>
+                        <button class="prod-cat-tab" data-cat="resin">수지 가공</button>
+                    </div>
+
+                    <!-- MCT 가공 -->
+                    <div class="prod-cat-content active" data-cat="mct">
+                        <div class="prod-grid fade-up mt-large">
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/MCT/mct-gold-insert.jpg')"></div>
+                                <div class="prod-info"><h4>골드 인서트 블록</h4></div>
                             </div>
-                            <div class="prod-info">
-                                <h4>의료용 티타늄 하우징</h4>
-                                <div class="prod-industry">주요 납품: 대학병원/의료기기</div>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/MCT/mct-defense.jpg')"></div>
+                                <div class="prod-info"><h4>방산 분야 부품</h4></div>
                             </div>
-                        </div>
-                        <div class="prod-card">
-                            <div class="prod-img">
-                                <span class="prod-tag">CNC 라우팅</span>
-                                <i data-lucide="database"></i>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/MCT/mct-square-block.jpg')"></div>
+                                <div class="prod-info"><h4>사각 가공 블럭</h4></div>
                             </div>
-                            <div class="prod-info">
-                                <h4>방산 레이더 스핀들 부품</h4>
-                                <div class="prod-industry">주요 납품: 국방무기 체계</div>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/MCT/mct-filter.jpg')"></div>
+                                <div class="prod-info"><h4>이동통신 분야 필터</h4></div>
                             </div>
-                        </div>
-                        <div class="prod-card">
-                            <div class="prod-img">
-                                <span class="prod-tag">5축 복합가공</span>
-                                <i data-lucide="aperture"></i>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/MCT/mct-filter-body.jpg')"></div>
+                                <div class="prod-info"><h4>이동통신분야 필터 바디</h4></div>
                             </div>
-                            <div class="prod-info">
-                                <h4>항공기 엔진 임펠러</h4>
-                                <div class="prod-industry">주요 납품: 항공우주 산업</div>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/MCT/mct-telecom.jpg')"></div>
+                                <div class="prod-info"><h4>이동통신분야 부품</h4></div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- CNC / 5축 / NC / 에칭 / 수지 — 사진 추가 예정 -->
+                    <div class="prod-cat-content" data-cat="cnc">
+                        <div class="prod-empty fade-up"><i data-lucide="image"></i><p>제품 사진 등록 예정</p></div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="5axis">
+                        <div class="prod-empty fade-up"><i data-lucide="image"></i><p>제품 사진 등록 예정</p></div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="nc">
+                        <div class="prod-empty fade-up"><i data-lucide="image"></i><p>제품 사진 등록 예정</p></div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="etching">
+                        <div class="prod-empty fade-up"><i data-lucide="image"></i><p>제품 사진 등록 예정</p></div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="resin">
+                        <div class="prod-empty fade-up"><i data-lucide="image"></i><p>제품 사진 등록 예정</p></div>
+                    </div>
                 </div>
 
+                <!-- ── RF 제품 탭 ── -->
                 <div class="tab-content" data-tab="rf">
                     <div class="prod-grid fade-up mt-large">
                         <div class="prod-card">
-                            <div class="prod-img">
-                                <span class="prod-tag">BPF/LPF Filter</span>
-                                <i data-lucide="wifi"></i>
-                            </div>
+                            <div class="prod-img" style="background-image:url('assets/rf-sector.jpg')"></div>
                             <div class="prod-info">
-                                <h4>Cavity Bandpass Filter</h4>
-                                <div class="prod-industry">활용: 기지국 중계기 (5G)</div>
+                                <h4>RF 부품</h4>
+                                <div class="prod-industry">이동통신·방산 분야</div>
                             </div>
                         </div>
                         <div class="prod-card">
-                            <div class="prod-img">
-                                <span class="prod-tag">Duplexer</span>
-                                <i data-lucide="git-merge"></i>
-                            </div>
+                            <div class="prod-img"><i data-lucide="git-merge"></i></div>
                             <div class="prod-info">
                                 <h4>High-Power Duplexer</h4>
-                                <div class="prod-industry">활용: 군용 및 상용 기지국</div>
+                                <div class="prod-industry">군용 및 상용 기지국</div>
                             </div>
                         </div>
                         <div class="prod-card">
-                            <div class="prod-img">
-                                <span class="prod-tag">Multiplexer</span>
-                                <i data-lucide="git-branch"></i>
-                            </div>
+                            <div class="prod-img"><i data-lucide="git-branch"></i></div>
                             <div class="prod-info">
                                 <h4>Tetra Triplexer Array</h4>
-                                <div class="prod-industry">활용: 국가재난망 무선설비</div>
+                                <div class="prod-industry">국가재난망 무선설비</div>
                             </div>
                         </div>
                     </div>

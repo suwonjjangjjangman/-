@@ -189,6 +189,9 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 .hero-slide.active { opacity: 1; pointer-events: auto; }
 
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 1; }
+/* PC: PC 배경 보이고 모바일 배경 숨김 */
+.hero-bg--mobile { display: none; }
+.hero-bg--pc { display: block; }
 .hero-overlay { position: absolute; inset: 0; background: rgba(10, 25, 47, 0.45); z-index: 2; }
 
 /* Slide text content — bottom aligned (PC) */
@@ -299,11 +302,29 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 .cert-doc span { display: block; font-size: 0.85rem; font-weight: 600; color: var(--clr-navy); margin-top: 0.5rem; }
 
 /* --- PRODUCT & TECH SPECIFICS --- */
+/* 소카테고리 탭 */
+.prod-cat-tabs { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; margin-top: 2rem; }
+.prod-cat-tab {
+    padding: 0.55rem 1.4rem; border: 1.5px solid var(--clr-border);
+    background: var(--clr-white); color: var(--clr-text-muted);
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    border-radius: 4px; transition: var(--transition);
+}
+.prod-cat-tab:hover { border-color: var(--clr-navy); color: var(--clr-navy); }
+.prod-cat-tab.active { background: var(--clr-navy); color: var(--clr-white); border-color: var(--clr-navy); }
+
+.prod-cat-content { display: none; }
+.prod-cat-content.active { display: block; }
+
+.prod-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 5rem 0; color: var(--clr-text-muted); }
+.prod-empty svg { width: 48px; height: 48px; opacity: 0.3; }
+.prod-empty p { font-size: 1rem; }
+
 /* Filter Grid / Product Cards */
 .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.prod-card { border: 1px solid var(--clr-border); background: var(--clr-white); transition: var(--transition); }
+.prod-card { border: 1px solid var(--clr-border); background: var(--clr-white); transition: var(--transition); border-radius: 8px; overflow: hidden; }
 .prod-card:hover { border-color: var(--clr-navy); box-shadow: var(--shadow-sm); transform: translateY(-3px); }
-.prod-img { height: 220px; background: var(--clr-bg-surface); position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.prod-img { height: 220px; background: var(--clr-bg-surface); background-size: cover; background-position: center; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .prod-img svg { width: 64px; height: 64px; color: var(--clr-border); }
 .prod-tag { position: absolute; top: 1rem; right: 1rem; background: var(--clr-navy); color: var(--clr-white); font-size: 0.75rem; padding: 0.2rem 0.8rem; border-radius: 20px; font-weight: 600; }
 .prod-info { padding: 1.5rem; }
@@ -679,8 +700,9 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     .notice-table { display: block; overflow-x: auto; white-space: nowrap; }
 
     /* Hero slide mobile */
-    .hero-bg { background-image: url('./assets/mobilemainphoto.jpg') !important; }
-    .hero-slide-content { justify-content: flex-end; padding-bottom: 12%; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero-bg--pc { display: none; }
+    .hero-bg--mobile { display: block; }
+    .hero-slide-content { justify-content: center; padding-top: 50%; padding-left: 1.5rem; padding-right: 1.5rem; padding-bottom: 0; }
     .hero-main { font-size: 1.5rem; line-height: 1.4; word-break: keep-all; }
     .hero-sub { font-size: 0.82rem; padding: 0 0.5rem; }
 }

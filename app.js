@@ -290,6 +290,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startSlider();
 
+    // 소카테고리 탭 (MCT/CNC/5축 등)
+    document.querySelectorAll('.prod-cat-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const cat = tab.dataset.cat;
+            const parent = tab.closest('.tab-content');
+            parent.querySelectorAll('.prod-cat-tab').forEach(t => t.classList.remove('active'));
+            parent.querySelectorAll('.prod-cat-content').forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            parent.querySelector(`.prod-cat-content[data-cat="${cat}"]`).classList.add('active');
+        });
+    });
+
     // Mobile dropdown toggle
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {
