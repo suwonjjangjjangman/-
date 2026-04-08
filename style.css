@@ -191,11 +191,11 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 1; }
 .hero-overlay { position: absolute; inset: 0; background: rgba(10, 25, 47, 0.45); z-index: 2; }
 
-/* Slide text content — centered, bottom 35% */
+/* Slide text content — bottom aligned (PC) */
 .hero-slide-content {
     position: absolute; inset: 0; z-index: 10;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding-bottom: 8%;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+    padding-bottom: 13%;
     text-align: center;
     color: var(--clr-white);
 }
@@ -679,7 +679,8 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     .notice-table { display: block; overflow-x: auto; white-space: nowrap; }
 
     /* Hero slide mobile */
-    .hero-slide-content { justify-content: center; padding-bottom: 0; padding: 0 1.5rem; }
-    .hero-main { font-size: 1.9rem; line-height: 1.45; }
-    .hero-sub { font-size: 0.9rem; padding: 0 0.5rem; }
+    .hero-bg { background-image: url('./assets/mobilemainphoto.jpg') !important; }
+    .hero-slide-content { justify-content: flex-end; padding-bottom: 12%; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero-main { font-size: 1.5rem; line-height: 1.4; word-break: keep-all; }
+    .hero-sub { font-size: 0.82rem; padding: 0 0.5rem; }
 }
