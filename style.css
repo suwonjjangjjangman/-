@@ -573,9 +573,18 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     to   { background-position: -200% 0; }
 }
 
-/* RF 제품 실제 사진 */
+/* 정밀가공 대표 사진 */
+#showcase-machining-bg {
+    background-image: url('./assets/product-main-machining.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#showcase-machining-bg::before { display: none; }
+#showcase-machining-bg .prod-showcase-icon { display: none; }
+
+/* RF 제품 대표 사진 */
 #showcase-rf-bg {
-    background-image: url('./assets/rf-sector.jpg');
+    background-image: url('./assets/product-main-rf.jpg');
     background-size: cover;
     background-position: center;
 }
