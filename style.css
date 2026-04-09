@@ -702,7 +702,7 @@ h1, h2, h3, h4, h5 { color: var(--clr-navy); font-weight: 700; letter-spacing: -
     /* Hero slide mobile */
     .hero-bg--pc { display: none; }
     .hero-bg--mobile { display: block; }
-    .hero-slide-content { justify-content: center; padding-top: 50%; padding-left: 1.5rem; padding-right: 1.5rem; padding-bottom: 0; }
+    .hero-slide-content { justify-content: center; padding-top: 25%; padding-left: 1.5rem; padding-right: 1.5rem; padding-bottom: 0; }
     .hero-main { font-size: 1.5rem; line-height: 1.4; word-break: keep-all; }
     .hero-sub { font-size: 0.82rem; padding: 0 0.5rem; }
 }
