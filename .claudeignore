@@ -1,0 +1,43 @@
+# Git internals
+.git/
+
+# 패키지 의존성
+node_modules/
+
+# 빌드 출력 폴더
+dist/
+build/
+.next/
+.nuxt/
+out/
+.cache/
+.parcel-cache/
+
+# 환경변수 (보안)
+.env
+.env.*
+
+# macOS / 에디터 시스템 파일
+.DS_Store
+.vscode/
+.idea/
+
+# 이미지/바이너리 자산 — 코드 편집과 무관
+assets/
+사진 모음/
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.gif
+**/*.webp
+**/*.svg
+**/*.ico
+**/*.mp4
+**/*.mp3
+**/*.pdf
+**/*.zip
+
+# 레거시 스크래핑 파일 (참고용 HTML/CSS/JS 원본)
+견적 문의_files/
+인증서 및 특허_files/
+회사 소개서_files/

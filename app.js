@@ -316,3 +316,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// 견적 문의 폼 — Netlify Forms AJAX 제출
+async function handleInquirySubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const btn = form.querySelector('[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = '전송 중...';
+
+    try {
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+        });
+        if (response.ok) {
+            alert('문의가 성공적으로 접수되었습니다.\n담당자가 빠르게 연락드리겠습니다.');
+            form.reset();
+        } else {
+            throw new Error('서버 응답 오류');
+        }
+    } catch (e) {
+        alert('전송 중 오류가 발생했습니다.\n이메일로 직접 문의해 주세요: procurement@shinhwa-tech.kr');
+    } finally {
+        btn.disabled = false;
+        btn.textContent = '문의 접수';
+    }
+}
