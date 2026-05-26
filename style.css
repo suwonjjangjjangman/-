@@ -11,6 +11,7 @@
     --clr-bg-surface: #eef2f6;
     --clr-text: #2c3e50;
     --clr-text-light: #6a7c92;
+    --clr-text-muted: #6a7c92;
     --clr-border: #e2e8f0;
 
     /* Typography - Clean Sans */
@@ -403,6 +404,11 @@ h5 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+.page-tabs-bar .page-tabs {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
 /* --- HOME PAGE COMPONENTS --- */
 .hero {
     position: relative;
@@ -498,29 +504,6 @@ h5 {
     border-color: var(--clr-white);
 }
 
-/* Legacy (unused but kept) */
-.hero-content {
-    position: relative;
-    z-index: 3;
-    color: var(--clr-white);
-    max-width: 600px;
-    left: 5%;
-}
-
-.hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    color: var(--clr-white);
-}
-
-.hero-desc {
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-    color: rgba(255, 255, 255, 0.9);
-}
 
 /* Counters Row */
 .counter-row {
@@ -771,6 +754,16 @@ h5 {
 .tl-desc {
     font-size: 1.05rem;
     color: var(--clr-text);
+}
+
+.tl-desc p + p {
+    margin-top: 0.5rem;
+}
+
+.contact-label {
+    font-size: 0.85rem;
+    color: var(--clr-text-light);
+    margin-bottom: 0.25rem;
 }
 
 /* Certifications 5 Gallery */
@@ -1244,97 +1237,6 @@ h5 {
     font-size: 0.8rem;
 }
 
-/* Homepage 2-Panel Product Quick Access */
-.home-panels {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-}
-
-.home-panel {
-    position: relative;
-    height: 420px;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    text-decoration: none;
-}
-
-.home-panel-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.home-panel:hover .home-panel-bg {
-    transform: scale(1.06);
-}
-
-.home-panel-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(10, 25, 48, 0.88) 0%, rgba(10, 25, 48, 0.25) 60%, rgba(10, 25, 48, 0.05) 100%);
-    transition: var(--transition);
-}
-
-.home-panel:hover .home-panel-overlay {
-    background: linear-gradient(to top, rgba(10, 25, 48, 0.92) 0%, rgba(10, 25, 48, 0.40) 60%, rgba(10, 25, 48, 0.10) 100%);
-}
-
-.home-panel-content {
-    position: relative;
-    z-index: 2;
-    color: var(--clr-white);
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.home-panel-tag {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    color: var(--clr-gold, #c9a84c);
-    text-transform: uppercase;
-}
-
-.home-panel-content h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--clr-white);
-    margin: 0;
-    line-height: 1.2;
-}
-
-.home-panel-desc {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
-    margin: 0.2rem 0 0.6rem;
-}
-
-.home-panel-btn {
-    display: inline-block;
-    padding: 0.55rem 1.4rem;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.82rem;
-    font-weight: 500;
-    transition: var(--transition);
-    border-radius: 2px;
-    width: fit-content;
-}
-
-.home-panel:hover .home-panel-btn {
-    background: rgba(255, 255, 255, 0.18);
-    border-color: var(--clr-white);
-    color: var(--clr-white);
-}
 
 /* ── Product Showcase Section ─────────────────────────────────── */
 .prod-showcase {
@@ -1554,21 +1456,6 @@ h5 {
     transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .prod-showcase-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .prod-showcase-item--offset {
-        margin-top: 0;
-    }
-
-    .prod-showcase-title {
-        font-size: 2rem;
-    }
-}
 
 /* Hero slider dots */
 .hero-dots {
@@ -1620,6 +1507,109 @@ h5 {
     transition: var(--transition);
 }
 
+/* ── RF Category Overview ── */
+.rf-cat-overview {
+    margin-bottom: 3rem;
+}
+
+.rf-cat-wrap {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.rf-cat-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.rf-cat-lines line {
+    stroke: var(--clr-navy-light);
+    stroke-width: 1.5;
+    stroke-dasharray: 5 4;
+    opacity: 0.5;
+}
+
+.rf-cat-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--clr-navy);
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.4;
+    z-index: 2;
+    border: 3px solid var(--clr-gold);
+    box-shadow: 0 4px 24px rgba(26, 58, 92, 0.35);
+    letter-spacing: 0.02em;
+}
+
+.rf-cat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+}
+
+.rf-cat-card {
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--clr-white);
+    transition: var(--transition);
+}
+
+.rf-cat-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 28px rgba(26, 58, 92, 0.15);
+    border-color: var(--clr-navy);
+}
+
+.rf-cat-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--clr-bg-surface);
+}
+
+.rf-cat-img--hpf {
+    background-image: url("assets/RF 컴포넌트 파생 사진/HPF, LPF, BPF, BRF.jpg");
+}
+.rf-cat-img--combiner {
+    background-image: url("assets/RF 컴포넌트 파생 사진/combner, multiplexer, duplexer.jpg");
+}
+.rf-cat-img--coupler {
+    background-image: url("assets/RF 컴포넌트 파생 사진/3dB Hybrid Cpoupler,Dircetional Coupler, Divder.jpg");
+}
+.rf-cat-img--rrh {
+    background-image: url("assets/RF 컴포넌트 파생 사진/RRH Filter.jpg");
+}
+
+.rf-cat-label {
+    padding: 1rem 1.2rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--clr-navy);
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
 /* Responsive basics */
 @media (max-width: 1024px) {
     .ind-grid {
@@ -1639,20 +1629,19 @@ h5 {
 }
 
 @media (max-width: 768px) {
-    .home-panels {
+
+    .prod-showcase-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .home-panel {
-        height: 320px;
+    .prod-showcase-item--offset {
+        margin-top: 0;
     }
 
-    .home-panel-content h3 {
-        font-size: 1.5rem;
+    .prod-showcase-title {
+        font-size: 2rem;
     }
-}
-
-@media (max-width: 768px) {
 
     /* Navbar override for Drawer */
     .mobile-menu-btn {
@@ -1728,6 +1717,21 @@ h5 {
     .contact-layout,
     .ceo-layout {
         grid-template-columns: 1fr;
+    }
+
+    .rf-cat-badge {
+        width: 84px;
+        height: 84px;
+        font-size: 0.72rem;
+    }
+
+    .rf-cat-img {
+        height: 150px;
+    }
+
+    .rf-cat-label {
+        font-size: 0.78rem;
+        padding: 0.75rem 0.8rem;
     }
 
     .ceo-logo {

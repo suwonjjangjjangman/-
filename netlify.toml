@@ -5,6 +5,18 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[redirects]]
+  from = "https://swt2002.co.kr"
+  to = "https://shinhwatechnology.co.kr/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://swt2002.co.kr/*"
+  to = "https://shinhwatechnology.co.kr/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
