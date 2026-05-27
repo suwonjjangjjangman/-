@@ -1509,6 +1509,7 @@ h5 {
 
 /* ── RF Category Overview ── */
 .rf-cat-overview {
+    margin-top: 1.5rem;
     margin-bottom: 3rem;
 }
 
@@ -1526,6 +1527,7 @@ h5 {
     height: 100%;
     pointer-events: none;
     overflow: visible;
+    z-index: 0;
 }
 
 .rf-cat-lines line {
@@ -1540,8 +1542,8 @@ h5 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: var(--clr-navy);
     color: var(--clr-white);
@@ -1550,10 +1552,10 @@ h5 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.88rem;
+    font-size: 1.05rem;
     font-weight: 700;
     line-height: 1.4;
-    z-index: 2;
+    z-index: 3;
     border: 3px solid var(--clr-gold);
     box-shadow: 0 4px 24px rgba(26, 58, 92, 0.35);
     letter-spacing: 0.02em;
@@ -1567,6 +1569,8 @@ h5 {
 }
 
 .rf-cat-card {
+    position: relative;
+    z-index: 2;
     border: 1px solid var(--clr-border);
     border-radius: 8px;
     overflow: hidden;
