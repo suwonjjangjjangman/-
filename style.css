@@ -1869,6 +1869,15 @@ h5 {
     max-width: 600px;
 }
 
+.biz-intro {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--clr-text);
+    word-break: keep-all;
+    max-width: 860px;
+    margin-bottom: 3rem;
+}
+
 .biz-cards-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
