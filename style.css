@@ -216,10 +216,27 @@ h5 {
     letter-spacing: -0.05em;
 }
 
-.logo span {
-    display: flex;
-    align-items: center;
+.logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.65rem;
+    font-weight: 700;
+    white-space: nowrap;
     color: var(--clr-navy);
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 38px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
 }
 
 .nav-links {
@@ -2010,7 +2027,7 @@ h5 {
 
 .rf-ov-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -2076,17 +2093,12 @@ h5 {
 
 @media (max-width: 768px) {
     .rf-ov-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .rf-ov-img {
-        height: 140px;
-    }
-
-    .rf-ov-center {
-        width: 68px;
-        height: 68px;
-        font-size: 0.65rem;
+        height: 180px;
     }
 }
 

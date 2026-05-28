@@ -18,8 +18,8 @@
         <nav class="navbar">
             <div class="container nav-content">
                 <a href="#home" class="logo">
-                    <img src="./assets/logo.png" alt="신화테크놀러지 로고" style="height: 48px; width: auto; object-fit: contain;">
-                    <span style="font-size: 1.65rem; font-weight: 700; white-space: nowrap;">Shinhwa Technology</span>
+                    <img src="./assets/logo.png" alt="신화테크놀러지 로고" class="logo-img">
+                    <span class="logo-text">Shinhwa Technology</span>
                 </a>
                 
                 <div class="mobile-menu-btn">
@@ -527,6 +527,20 @@
                 <!-- ── RF 제품 탭 ── -->
                 <div class="tab-content" data-tab="rf">
 
+                    <!-- RF 소카테고리 탭 -->
+                    <div class="prod-cat-tabs fade-up">
+                        <button class="prod-cat-tab active" data-cat="hpf">HPF</button>
+                        <button class="prod-cat-tab" data-cat="lpf">LPF</button>
+                        <button class="prod-cat-tab" data-cat="bpf">BPF</button>
+                        <button class="prod-cat-tab" data-cat="brf">BRF</button>
+                        <button class="prod-cat-tab" data-cat="combiner">Combiner</button>
+                        <button class="prod-cat-tab" data-cat="multiplexer">Multiplexer</button>
+                        <button class="prod-cat-tab" data-cat="duplexer">Duplexer</button>
+                        <button class="prod-cat-tab" data-cat="hybrid-coupler">3dB Hybrid Coupler</button>
+                        <button class="prod-cat-tab" data-cat="directional-coupler">Directional Coupler</button>
+                        <button class="prod-cat-tab" data-cat="divider">Divider</button>
+                    </div>
+
                     <!-- RF 제품 카테고리 개요 그리드 -->
                     <div class="rf-ov-wrap fade-up">
                         <div class="rf-ov-grid">
@@ -542,27 +556,7 @@
                                 <div class="rf-ov-img" style="background-image:url('assets/RF/rf-overview-coupler.jpg')"></div>
                                 <div class="rf-ov-label">3dB Hybrid Coupler / Directional Coupler / Divider</div>
                             </a>
-                            <a class="rf-ov-card" href="#products__rf" data-switch-cat="rrh-filter">
-                                <div class="rf-ov-img" style="background-image:url('assets/RF/rf-overview-rrh.jpg')"></div>
-                                <div class="rf-ov-label">RRH Filter</div>
-                            </a>
                         </div>
-                        <div class="rf-ov-center">RF<br>Component</div>
-                    </div>
-
-                    <!-- RF 소카테고리 탭 -->
-                    <div class="prod-cat-tabs fade-up">
-                        <button class="prod-cat-tab active" data-cat="hpf">HPF</button>
-                        <button class="prod-cat-tab" data-cat="lpf">LPF</button>
-                        <button class="prod-cat-tab" data-cat="bpf">BPF</button>
-                        <button class="prod-cat-tab" data-cat="brf">BRF</button>
-                        <button class="prod-cat-tab" data-cat="combiner">Combiner</button>
-                        <button class="prod-cat-tab" data-cat="multiplexer">Multiplexer</button>
-                        <button class="prod-cat-tab" data-cat="duplexer">Duplexer</button>
-                        <button class="prod-cat-tab" data-cat="hybrid-coupler">3dB Hybrid Coupler</button>
-                        <button class="prod-cat-tab" data-cat="directional-coupler">Directional Coupler</button>
-                        <button class="prod-cat-tab" data-cat="divider">Divider</button>
-                        <button class="prod-cat-tab" data-cat="rrh-filter">RRH Filter</button>
                     </div>
 
                     <div class="prod-cat-content active" data-cat="hpf">
@@ -628,11 +622,6 @@
                         </div>
                     </div>
                     <div class="prod-cat-content" data-cat="divider">
-                        <div class="prod-grid fade-up mt-large rf-empty-notice">
-                            <p class="rf-coming-soon">준비 중입니다.</p>
-                        </div>
-                    </div>
-                    <div class="prod-cat-content" data-cat="rrh-filter">
                         <div class="prod-grid fade-up mt-large rf-empty-notice">
                             <p class="rf-coming-soon">준비 중입니다.</p>
                         </div>
