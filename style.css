@@ -1851,3 +1851,157 @@ h5 {
         padding: 0 0.5rem;
     }
 }
+
+/* ── 사업분야 개편 ── */
+.biz-hero {
+    position: relative;
+    height: 420px;
+    background-image: url('assets/product-main-machining.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.biz-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 30, 60, 0.62);
+}
+
+.biz-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.biz-hero-sub {
+    color: var(--clr-gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.biz-hero-title {
+    color: var(--clr-white);
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.biz-cards-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.biz-card {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+}
+
+.biz-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.biz-card:hover .biz-card-bg {
+    transform: scale(1.05);
+}
+
+.biz-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 30, 60, 0.5);
+    transition: background 0.4s ease;
+}
+
+.biz-card:hover .biz-card-overlay {
+    background: rgba(10, 30, 60, 0.7);
+}
+
+.biz-card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.biz-card-title {
+    color: var(--clr-white);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.biz-card-sub {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+}
+
+.biz-card-more {
+    display: inline-block;
+    border: 1.5px solid var(--clr-white);
+    color: var(--clr-white);
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.biz-card:hover .biz-card-more {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rf-empty-notice {
+    display: block !important;
+}
+
+.rf-coming-soon {
+    color: var(--clr-text-muted);
+    font-size: 1rem;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .biz-hero {
+        height: 300px;
+    }
+
+    .biz-hero-title {
+        font-size: 1.2rem;
+    }
+
+    .biz-cards-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .biz-card {
+        height: 320px;
+    }
+
+    .biz-card-title {
+        font-size: 1.5rem;
+    }
+}

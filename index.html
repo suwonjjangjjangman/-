@@ -339,61 +339,35 @@
 
         <!-- ================= BUSINESS ================= -->
         <section id="business" class="view-section">
-            <div class="page-header">
-                <div class="container fade-up">
-                    <h1>사업분야</h1>
-                    <span class="en-sub">Business Areas</span>
-                </div>
-            </div>
-            <div class="page-tabs-bar">
-                <div class="container">
-                    <div class="page-tabs">
-                        <div class="page-tab active" data-target="machining">정밀가공 파트</div>
-                        <div class="page-tab" data-target="rf">RF부품 파트</div>
-                    </div>
+            <!-- 슬로건 배너 -->
+            <div class="biz-hero fade-up">
+                <div class="biz-hero-overlay"></div>
+                <div class="biz-hero-content">
+                    <p class="biz-hero-sub">Business Areas</p>
+                    <h2 class="biz-hero-title">최고의 정밀 가공 기술과 RF기술의 융합으로<br>고객에게 신뢰받는 제품을 제공합니다</h2>
                 </div>
             </div>
 
-            <div class="container section-padding">
-
-                <!-- Machining Tab -->
-                <div class="tab-content active" data-tab="machining">
-                    <div class="data-card-grid fade-up mt-large">
-                        <div class="data-card">
-                            <div class="dc-num">01</div>
-                            <i data-lucide="settings"></i>
-                            <h4>초정밀 MCT 연삭 가공</h4>
-                            <p>단 하나의 불량도 허용치 않는 방산 규격을 충족하는 최고정밀도의 머시닝 센터 공정 체계 보유.</p>
-                        </div>
-                        <div class="data-card">
-                            <div class="dc-num">02</div>
-                            <i data-lucide="disc"></i>
-                            <h4>고진공 CNC 부품 생산</h4>
-                            <p>초고속 회전과 내마모성이 필수적인 의료 및 항공우주용 특수 소재 원통 나사 가공.</p>
-                        </div>
-                        <div class="data-card">
-                            <div class="dc-num">03</div>
-                            <i data-lucide="layers"></i>
-                            <h4>특수 합금 및 난삭재 기술</h4>
-                            <p>스테인리스, 티타늄, 인코넬 등 가공이 극히 까다로운 특급 소재에 대한 독보적인 경험.</p>
-                        </div>
+            <!-- 사업 카드 -->
+            <div class="biz-cards-wrap">
+                <a href="#products__machining" class="biz-card fade-up">
+                    <div class="biz-card-bg" style="background-image:url('assets/product-main-machining.jpg')"></div>
+                    <div class="biz-card-overlay"></div>
+                    <div class="biz-card-content">
+                        <h3 class="biz-card-title">정밀 가공</h3>
+                        <p class="biz-card-sub">Precision Machining</p>
+                        <span class="biz-card-more">more</span>
                     </div>
-                </div>
-
-                <!-- RF Tab -->
-                <div class="tab-content" data-tab="rf">
-                    <div class="rf-diagram fade-up">
-                        <div class="rf-block">
-                            <h4>정밀 설계</h4>
-                            <p>Cadian, SolidWorks 등 전문 CAD 프로그램을 활용한 RF 부품 정밀 설계 — 직접 설계로 형상 최적화와 신속한 수정 대응</p>
-                        </div>
-                        <i data-lucide="arrow-right" class="flow-arrow"></i>
-                        <div class="rf-block">
-                            <h4>샘플 개발 &amp; 양산화</h4>
-                            <p>자체 정밀가공 인프라를 활용하여 샘플 제작·튜닝부터 양산 이관까지 원스톱으로 진행</p>
-                        </div>
+                </a>
+                <a href="#products__rf" class="biz-card fade-up" style="transition-delay:0.15s">
+                    <div class="biz-card-bg" style="background-image:url('assets/product-main-rf.jpg')"></div>
+                    <div class="biz-card-overlay"></div>
+                    <div class="biz-card-content">
+                        <h3 class="biz-card-title">이동통신 RF 필터</h3>
+                        <p class="biz-card-sub">RF Components</p>
+                        <span class="biz-card-more">more</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -531,37 +505,91 @@
                 <!-- ── RF 제품 탭 ── -->
                 <div class="tab-content" data-tab="rf">
 
-                    <!-- RF Component 카테고리 개요 -->
-                    <div class="rf-cat-overview fade-up">
-                        <div class="rf-cat-wrap">
-                            <svg class="rf-cat-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                                <line x1="50" y1="50" x2="25" y2="25"/>
-                                <line x1="50" y1="50" x2="75" y2="25"/>
-                                <line x1="50" y1="50" x2="25" y2="75"/>
-                                <line x1="50" y1="50" x2="75" y2="75"/>
-                            </svg>
-                            <div class="rf-cat-badge">
-                                <span>RF</span>
-                                <span>Component</span>
+                    <!-- RF 소카테고리 탭 -->
+                    <div class="prod-cat-tabs fade-up">
+                        <button class="prod-cat-tab active" data-cat="hpf">HPF</button>
+                        <button class="prod-cat-tab" data-cat="lpf">LPF</button>
+                        <button class="prod-cat-tab" data-cat="bpf">BPF</button>
+                        <button class="prod-cat-tab" data-cat="brf">BRF</button>
+                        <button class="prod-cat-tab" data-cat="combiner">Combiner</button>
+                        <button class="prod-cat-tab" data-cat="multiplexer">Multiplexer</button>
+                        <button class="prod-cat-tab" data-cat="duplexer">Duplexer</button>
+                        <button class="prod-cat-tab" data-cat="hybrid-coupler">3dB Hybrid Coupler</button>
+                        <button class="prod-cat-tab" data-cat="directional-coupler">Directional Coupler</button>
+                        <button class="prod-cat-tab" data-cat="divider">Divider</button>
+                        <button class="prod-cat-tab" data-cat="rrh-filter">RRH Filter</button>
+                    </div>
+
+                    <div class="prod-cat-content active" data-cat="hpf">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="lpf">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="bpf">
+                        <div class="prod-grid fade-up mt-large">
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/RF/BPF.jpg')"></div>
+                                <div class="prod-info"><h4>BPF</h4></div>
                             </div>
-                            <div class="rf-cat-grid">
-                                <div class="rf-cat-card">
-                                    <div class="rf-cat-img rf-cat-img--hpf"></div>
-                                    <p class="rf-cat-label">HPF / LPF / BPF / BRF</p>
-                                </div>
-                                <div class="rf-cat-card">
-                                    <div class="rf-cat-img rf-cat-img--combiner"></div>
-                                    <p class="rf-cat-label">Combiner / Multiplexer / Duplexer</p>
-                                </div>
-                                <div class="rf-cat-card">
-                                    <div class="rf-cat-img rf-cat-img--coupler"></div>
-                                    <p class="rf-cat-label">3dB Hybrid Coupler / Directional Coupler / Divider</p>
-                                </div>
-                                <div class="rf-cat-card">
-                                    <div class="rf-cat-img rf-cat-img--rrh"></div>
-                                    <p class="rf-cat-label">RRH Filter</p>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="brf">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="combiner">
+                        <div class="prod-grid fade-up mt-large">
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/RF/Combiner(indoor).jpg')"></div>
+                                <div class="prod-info"><h4>Combiner (Indoor)</h4></div>
                             </div>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/RF/Combiner(outdoor).jpg')"></div>
+                                <div class="prod-info"><h4>Combiner (Outdoor)</h4></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="multiplexer">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="duplexer">
+                        <div class="prod-grid fade-up mt-large">
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/RF/Duplexer.jpg')"></div>
+                                <div class="prod-info"><h4>Duplexer</h4></div>
+                            </div>
+                            <div class="prod-card">
+                                <div class="prod-img" style="background-image:url('assets/RF/Duplexer_1.jpg')"></div>
+                                <div class="prod-info"><h4>Duplexer</h4></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="hybrid-coupler">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="directional-coupler">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="divider">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
+                        </div>
+                    </div>
+                    <div class="prod-cat-content" data-cat="rrh-filter">
+                        <div class="prod-grid fade-up mt-large rf-empty-notice">
+                            <p class="rf-coming-soon">준비 중입니다.</p>
                         </div>
                     </div>
 
