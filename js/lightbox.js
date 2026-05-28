@@ -9,12 +9,20 @@ export function initLightbox() {
     document.querySelectorAll('.cert-doc').forEach(doc => {
         doc.addEventListener('click', () => {
             const img = doc.querySelector('.cert-img-real');
+            if (!img) return;
             const caption = doc.querySelector('span');
             lightboxImg.src = img.src;
             lightboxImg.alt = img.alt;
             lightboxCaption.textContent = caption?.textContent ?? '';
             lightbox.classList.add('active');
             if (window.lucide) lucide.createIcons();
+        });
+    });
+
+    document.querySelectorAll('.cert-doc-pdf').forEach(doc => {
+        doc.addEventListener('click', () => {
+            const href = doc.dataset.href;
+            if (href) window.open(href, '_blank');
         });
     });
 
