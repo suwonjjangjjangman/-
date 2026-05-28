@@ -1515,7 +1515,7 @@ h5 {
 
 .rf-cat-wrap {
     position: relative;
-    max-width: 860px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1551,7 +1551,7 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    padding: 2.5rem 0;
+    padding: 0;
 }
 
 .rf-cat-card {
@@ -1571,7 +1571,7 @@ h5 {
 }
 
 .rf-cat-img {
-    height: 200px;
+    height: 320px;
     background-size: cover;
     background-position: center;
     background-color: var(--clr-bg-surface);
