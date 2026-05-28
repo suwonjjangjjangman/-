@@ -33,4 +33,18 @@ export function initTabs() {
             parent.querySelector(`.prod-cat-content[data-cat="${cat}"]`).classList.add('active');
         });
     });
+
+    document.querySelectorAll('.rf-ov-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const cat = card.dataset.switchCat;
+            const rfTab = document.querySelector('.tab-content[data-tab="rf"]');
+            if (!rfTab) return;
+            const targetBtn = rfTab.querySelector(`.prod-cat-tab[data-cat="${cat}"]`);
+            if (targetBtn) {
+                targetBtn.click();
+                targetBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    });
 }
