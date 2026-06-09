@@ -65,8 +65,13 @@ export function initNav() {
     document.querySelectorAll('.nav-item').forEach(item => {
         item.addEventListener('click', e => {
             if (window.innerWidth <= 768 && e.target.classList.contains('nav-link')) {
-                e.preventDefault();
-                item.classList.toggle('open');
+                const hasDropdown = item.querySelector('.dropdown-menu');
+                if (hasDropdown) {
+                    e.preventDefault();
+                    item.classList.toggle('open');
+                } else {
+                    toggleMobileMenu();
+                }
             }
         });
     });

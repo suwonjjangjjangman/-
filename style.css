@@ -773,7 +773,7 @@ h5 {
     color: var(--clr-text);
 }
 
-.tl-desc p + p {
+.tl-desc p+p {
     margin-top: 0.5rem;
 }
 
@@ -1627,12 +1627,15 @@ h5 {
 .rf-cat-img--hpf {
     background-image: url("assets/RF 컴포넌트 파생 사진/HPF, LPF, BPF, BRF.jpg");
 }
+
 .rf-cat-img--combiner {
     background-image: url("assets/RF 컴포넌트 파생 사진/combner, multiplexer, duplexer.jpg");
 }
+
 .rf-cat-img--coupler {
     background-image: url("assets/RF 컴포넌트 파생 사진/3dB Hybrid Cpoupler,Dircetional Coupler, Divder.jpg");
 }
+
 .rf-cat-img--rrh {
     background-image: url("assets/RF 컴포넌트 파생 사진/RRH Filter.jpg");
 }
@@ -1989,7 +1992,7 @@ h5 {
 }
 
 .biz-card-sub {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     letter-spacing: 0.05em;
     margin-bottom: 1.5rem;
@@ -2036,16 +2039,34 @@ h5 {
 }
 
 @media (max-width: 768px) {
+    .biz-page-header {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .biz-slogan {
+        font-size: 1rem;
+    }
+
+    .biz-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
     .biz-cards-wrap {
         grid-template-columns: 1fr;
     }
 
     .biz-card {
-        height: 260px;
+        height: 240px;
     }
 
     .biz-card-title {
         font-size: 1.3rem;
+    }
+
+    .biz-card-more {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
