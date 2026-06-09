@@ -2054,6 +2054,8 @@ h5 {
 
     .biz-cards-wrap {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2.5rem;
     }
 
     .biz-card {
