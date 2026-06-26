@@ -1760,9 +1760,7 @@ h5 {
     }
 
     .rf-cat-badge {
-        width: 84px;
-        height: 84px;
-        font-size: 0.72rem;
+        display: none;
     }
 
     .rf-cat-img {
