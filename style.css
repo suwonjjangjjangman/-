@@ -2151,6 +2151,10 @@ h5 {
     .rf-ov-img {
         height: 180px;
     }
+
+    .rf-ov-center {
+        display: none;
+    }
 }
 
 /* PDF 인증서 카드 */
