@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 — 신화테크놀러지</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notice-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="notice-page-body">
+
+    <header class="notice-page-header">
+        <div class="container notice-page-header-inner">
+            <a href="/" class="logo">
+                <img src="./assets/logo.png" alt="신화테크놀러지 로고" class="logo-img">
+                <span class="logo-text">Shinhwa Technology</span>
+            </a>
+            <a href="/#support" class="notice-back-btn">← 공지사항 목록</a>
+        </div>
+    </header>
+
+    <main class="notice-page-main">
+        <div class="container">
+            <article class="notice-article" id="notice-article">
+                <header class="notice-article-header">
+                    <div class="notice-article-badge" id="notice-badge"></div>
+                    <h1 class="notice-article-title" id="notice-title">불러오는 중…</h1>
+                    <p class="notice-article-meta" id="notice-meta"></p>
+                </header>
+                <div class="notice-article-body" id="notice-body"></div>
+            </article>
+            <div class="notice-page-back">
+                <a href="/#support" class="btn btn-primary">← 목록으로 돌아가기</a>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/notice-page.js"></script>
+</body>
+</html>
