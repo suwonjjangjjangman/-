@@ -266,6 +266,28 @@ h5 {
     color: var(--clr-gold);
 }
 
+.nav-item--lang .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--clr-border);
+    border-radius: 20px;
+    padding: 0.35rem 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.nav-item--lang .nav-link:hover {
+    border-color: var(--clr-gold);
+    color: var(--clr-gold);
+}
+
+.lang-btn.active {
+    color: var(--clr-gold);
+    font-weight: 700;
+}
+
 /* Dropdown Menu CSS */
 .dropdown-menu {
     position: absolute;

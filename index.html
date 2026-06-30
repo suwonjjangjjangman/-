@@ -29,37 +29,46 @@
 
                 <ul class="nav-links">
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">회사소개</a>
+                        <a href="#about" class="nav-link" data-i18n="nav.about">회사소개</a>
                         <div class="dropdown-menu">
-                            <a href="#about__ceo" class="dropdown-item">CEO인사말</a>
-                            <a href="#about__history" class="dropdown-item">회사연혁</a>
-                            <a href="#about__cert" class="dropdown-item">인증서 및 특허</a>
+                            <a href="#about__ceo" class="dropdown-item" data-i18n="nav.about.ceo">CEO인사말</a>
+                            <a href="#about__history" class="dropdown-item" data-i18n="nav.about.history">회사연혁</a>
+                            <a href="#about__cert" class="dropdown-item" data-i18n="nav.about.cert">인증서 및 특허</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#business" class="nav-link">사업분야</a>
+                        <a href="#business" class="nav-link" data-i18n="nav.business">사업분야</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#products" class="nav-link">제품소개</a>
+                        <a href="#products" class="nav-link" data-i18n="nav.products">제품소개</a>
                         <div class="dropdown-menu">
-                            <a href="#products__machining" class="dropdown-item">정밀가공 제품</a>
-                            <a href="#products__rf" class="dropdown-item">RF 제품</a>
+                            <a href="#products__machining" class="dropdown-item" data-i18n="nav.products.machining">정밀가공 제품</a>
+                            <a href="#products__rf" class="dropdown-item" data-i18n="nav.products.rf">RF 제품</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#recruit" class="nav-link">인재채용</a>
+                        <a href="#recruit" class="nav-link" data-i18n="nav.recruit">인재채용</a>
                         <div class="dropdown-menu">
-                            <a href="#recruit__talent" class="dropdown-item">인재상</a>
-                            <a href="#recruit__welfare" class="dropdown-item">복리후생</a>
-                            <a href="#recruit__guide" class="dropdown-item">채용안내</a>
+                            <a href="#recruit__talent" class="dropdown-item" data-i18n="nav.recruit.talent">인재상</a>
+                            <a href="#recruit__welfare" class="dropdown-item" data-i18n="nav.recruit.welfare">복리후생</a>
+                            <a href="#recruit__guide" class="dropdown-item" data-i18n="nav.recruit.guide">채용안내</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#support__location" class="nav-link">고객지원</a>
+                        <a href="#support__location" class="nav-link" data-i18n="nav.support">고객지원</a>
                         <div class="dropdown-menu">
-                            <a href="#support__location" class="dropdown-item">찾아오시는길</a>
-                            <a href="#support__inquiry" class="dropdown-item">견적 및 문의</a>
-                            <a href="#support__notices" class="dropdown-item">공지사항</a>
+                            <a href="#support__location" class="dropdown-item" data-i18n="nav.support.location">찾아오시는길</a>
+                            <a href="#support__inquiry" class="dropdown-item" data-i18n="nav.support.inquiry">견적 및 문의</a>
+                            <a href="#support__notices" class="dropdown-item" data-i18n="nav.support.notices">공지사항</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item--lang">
+                        <a href="#" class="nav-link lang-toggle">
+                            <i data-lucide="globe"></i> LANGUAGE
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item lang-btn" data-lang="ko">🇰🇷 KOREAN</a>
+                            <a href="#" class="dropdown-item lang-btn" data-lang="en">🇺🇸 ENGLISH</a>
                         </div>
                     </li>
                 </ul>
@@ -240,8 +249,18 @@
                 </div>
 
                 <div class="tab-content" data-tab="history">
-                    <div class="sub-header fade-up"><h2>회사 연혁 (2002 - 2025)</h2></div>
+                    <div class="sub-header fade-up"><h2>회사 연혁 (2002 - 2026)</h2></div>
                     <div class="timeline-list fade-up">
+                        <div class="tl-item fade-up">
+                            <div class="tl-dot"></div>
+                            <div class="tl-content">
+                                <div class="tl-year">2026</div>
+                                <div class="tl-desc">
+                                    <p><strong>2026.06</strong> 중소기업기술정보진흥원 — 중소기업기술혁신개발(R&D) 스펙트럼인지형(Spectrum-Cognitive) 선정</p>
+                                    <p><strong>2026.05</strong> 국방산업연구원 상호 업무 협약 체결</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="tl-item fade-up">
                             <div class="tl-dot"></div>
                             <div class="tl-content">
@@ -430,15 +449,15 @@
                         <div class="prod-grid fade-up mt-large">
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/mct/mct-gold-insert.jpg')"></div>
-                                <div class="prod-info"><h4>골드 인서트 블록</h4></div>
+                                <div class="prod-info"><h4>페시브 제품</h4></div>
                             </div>
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/mct/mct-defense.jpg')"></div>
-                                <div class="prod-info"><h4>방산 분야 부품</h4></div>
+                                <div class="prod-info"><h4>NC + MCT 부품</h4></div>
                             </div>
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/mct/mct-square-block.jpg')"></div>
-                                <div class="prod-info"><h4>사각 가공 블럭</h4></div>
+                                <div class="prod-info"><h4>NC + MCT + 브레이징 부품</h4></div>
                             </div>
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/mct/mct-filter.jpg')"></div>
@@ -460,15 +479,15 @@
                         <div class="prod-grid fade-up mt-large">
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/cnc/cnc-1.jpg')"></div>
-                                <div class="prod-info"><h4>CNC 가공 부품</h4></div>
+                                <div class="prod-info"><h4>CNC + MCT + 슈퍼드릴 부품</h4></div>
                             </div>
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/cnc/cnc-2.jpg')"></div>
-                                <div class="prod-info"><h4>CNC 가공 부품</h4></div>
+                                <div class="prod-info"><h4>CNC + MCT + 방전 부품</h4></div>
                             </div>
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/cnc/cnc-3.jpg')"></div>
-                                <div class="prod-info"><h4>CNC 가공 부품</h4></div>
+                                <div class="prod-info"><h4>CNC + MCT 부품</h4></div>
                             </div>
                             <div class="prod-card">
                                 <div class="prod-img" style="background-image:url('assets/cnc/cnc-4.jpg')"></div>
