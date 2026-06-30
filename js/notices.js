@@ -19,9 +19,8 @@ export async function initNotices() {
         write:  isEn ? 'Write Post' : '글쓰기',
     };
 
-    const withIdx = data.notices.map((n, i) => ({ ...n, _idx: i }));
-    const pinned  = withIdx.filter(n => n.pinned);
-    const regular = withIdx.filter(n => !n.pinned);
+    const pinned  = data.notices.filter(n => n.pinned);
+    const regular = data.notices.filter(n => !n.pinned);
     const sorted  = [...pinned, ...regular];
 
     renderTable(container, sorted, labels);
@@ -33,7 +32,8 @@ function renderTable(container, notices, labels) {
         const numCell = n.pinned
             ? `<td class="nt-num nt-pin">${labels.pin}</td>`
             : `<td class="nt-num">${regIdx--}</td>`;
-        return `<tr class="notice-row" data-idx="${n._idx}">
+        const slug = n.slug || encodeURIComponent(n.title);
+        return `<tr class="notice-row" data-slug="${slug}">
             ${numCell}
             <td class="nt-title">${n.title}${n.summary ? `<br><small>${n.summary}</small>` : ''}</td>
             <td class="nt-auth">${n.author}</td>
@@ -57,7 +57,7 @@ function renderTable(container, notices, labels) {
 
     container.querySelectorAll('.notice-row').forEach(row => {
         row.addEventListener('click', () => {
-            location.href = `notice.html?id=${row.dataset.idx}`;
+            location.href = `notice.html?slug=${row.dataset.slug}`;
         });
     });
 }

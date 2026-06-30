@@ -1,16 +1,20 @@
 import { marked } from 'https://cdn.jsdelivr.net/npm/marked@9/lib/marked.esm.js';
 
 const params = new URLSearchParams(location.search);
-const id = parseInt(params.get('id') ?? '0', 10);
+const slug   = params.get('slug');
 
 fetch('./data/notices.json')
     .then(r => r.json())
     .then(data => {
-        const notice = data.notices[id];
+        const notice = slug
+            ? data.notices.find(n => n.slug === slug)
+            : data.notices[0];
+
         if (!notice) {
             document.getElementById('notice-title').textContent = '공지를 찾을 수 없습니다.';
             return;
         }
+
         document.title = `${notice.title} — 신화테크놀러지`;
         document.documentElement.lang = localStorage.getItem('lang') || 'ko';
 

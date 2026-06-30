@@ -103,8 +103,11 @@
 
 .notice-article-body img {
     max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 1.5rem auto;
     border-radius: var(--radius-md);
-    margin: 1.5rem 0;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
