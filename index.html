@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="assets/logo.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <!-- Top Navbar with Dropdowns -->
@@ -835,7 +836,7 @@
                         <div class="page-tabs" style="justify-content: center; margin-bottom: 2.5rem;">
                             <div class="page-tab active" data-i18n="support.tab.inq">견적 및 문의</div>
                         </div>
-                        <form name="inquiry-form" data-netlify="true" netlify-honeypot="bot-field">
+                        <form name="inquiry-form" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
                             <input type="hidden" name="form-name" value="inquiry-form">
                             <input type="hidden" name="bot-field" style="display:none">
                             <div class="form-group">
@@ -863,6 +864,11 @@
                                 <textarea name="message" class="form-control" rows="6" required></textarea>
                                 <p style="font-size: 0.8rem; color: var(--clr-text-light); margin-top: 0.4rem;" data-i18n="form.msg.hint">*수량, 재질, 납기 등을 구체적으로 작성해주시면 보다 정확한 답변이 가능합니다.</p>
                             </div>
+                            <div class="form-group">
+                                <label><span data-i18n="form.file.label">도면/파일 첨부</span></label>
+                                <input type="file" name="attachment" class="form-control" accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.zip" data-i18n-placeholder="form.file.ph">
+                                <p style="font-size: 0.8rem; color: var(--clr-text-light); margin-top: 0.4rem;" data-i18n="form.file.hint">PDF, DWG, DXF, JPG, PNG, ZIP 파일 첨부 가능 (선택)</p>
+                            </div>
                             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" data-i18n="form.submit">문의 접수</button>
                         </form>
                     </div>
@@ -870,44 +876,8 @@
 
                 <!-- Notices Tab -->
                 <div class="tab-content" data-tab="notices">
-                    <div class="fade-up">
-                        <table class="notice-table">
-                            <thead>
-                                <tr>
-                                    <th class="nt-num" data-i18n="notice.col.num">번호</th>
-                                    <th data-i18n="notice.col.title">제목(내용)</th>
-                                    <th class="nt-auth" data-i18n="notice.col.author">작성자</th>
-                                    <th class="nt-date" data-i18n="notice.col.date">작성일</th>
-                                    <th class="nt-views" data-i18n="notice.col.views">조회수</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="nt-num" style="background: var(--clr-navy); color: white; text-align: center; font-size: 0.75rem; font-weight: 700;" data-i18n="notice.pin">공지</td>
-                                    <td class="nt-title" data-i18n-html="notice.r1.title.full">(주)신화테크놀러지 회사소개서.pdf<br><small style="color: var(--clr-text-light);">2026년 신화 테크놀러지 회사소개서 입니다</small></td>
-                                    <td class="nt-auth" data-i18n="notice.author">관리자</td>
-                                    <td class="nt-date">2025-08-07</td>
-                                    <td class="nt-views">28</td>
-                                </tr>
-                                <tr>
-                                    <td class="nt-num">3</td>
-                                    <td class="nt-title" data-i18n-html="notice.r2.title.full">MIM 공형 기술서 자료<br><small style="color: var(--clr-text-light);">금형가공서 자료</small></td>
-                                    <td class="nt-auth" data-i18n="notice.author">관리자</td>
-                                    <td class="nt-date">2025-08-11</td>
-                                    <td class="nt-views">10</td>
-                                </tr>
-                                <tr>
-                                    <td class="nt-num">1</td>
-                                    <td class="nt-title" data-i18n-html="notice.r3.title.full">신화테크놀로지 홈페이지에 오신것을 환영합니다<br><small style="color: var(--clr-text-light);">안녕하세요 신화테크놀로지 홈페이지에 오신것을 환영합니다...</small></td>
-                                    <td class="nt-auth" data-i18n="notice.author">관리자</td>
-                                    <td class="nt-date">2022-05-05</td>
-                                    <td class="nt-views">112</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="text-align: right; margin-top: 1.5rem;">
-                            <button class="btn btn-primary" style="font-size: 0.9rem; padding: 0.6rem 1.5rem;" data-i18n="notice.write">글쓰기</button>
-                        </div>
+                    <div class="fade-up" id="notices-table-wrap">
+                        <p style="color: var(--clr-text-light); padding: 2rem 0;">공지사항을 불러오는 중...</p>
                     </div>
                 </div>
             </div>

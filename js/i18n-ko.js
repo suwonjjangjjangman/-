@@ -115,6 +115,8 @@ export const ko = {
     'form.area.hint': '문의하실 항목을 선택해주세요.',
     'form.msg.label': '문의내용/견적내용',
     'form.msg.hint': '*수량, 재질, 납기 등을 구체적으로 작성해주시면 보다 정확한 답변이 가능합니다.',
+    'form.file.label': '도면/파일 첨부',
+    'form.file.hint': 'PDF, DWG, DXF, JPG, PNG, ZIP 파일 첨부 가능 (선택)',
     'form.submit': '문의 접수',
     'notice.col.num': '번호', 'notice.col.title': '제목(내용)',
     'notice.col.author': '작성자', 'notice.col.date': '작성일', 'notice.col.views': '조회수',

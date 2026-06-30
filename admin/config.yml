@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: ko
+
+collections:
+  - name: notices
+    label: 공지사항
+    files:
+      - name: notices_list
+        label: 공지사항 목록
+        file: data/notices.json
+        fields:
+          - name: notices
+            label: 공지 목록
+            widget: list
+            fields:
+              - { label: 제목, name: title, widget: string }
+              - { label: 내용 요약, name: summary, widget: string }
+              - { label: 작성자, name: author, widget: string, default: 관리자 }
+              - { label: 날짜, name: date, widget: date, format: "YYYY-MM-DD" }
+              - { label: 상단 고정 공지, name: pinned, widget: boolean, default: false }

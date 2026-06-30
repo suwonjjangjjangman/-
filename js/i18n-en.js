@@ -115,6 +115,8 @@ export const en = {
     'form.area.hint': 'Please select the item you wish to inquire about.',
     'form.msg.label': 'Inquiry / Quote Details',
     'form.msg.hint': '*Providing specific details such as quantity, material, and delivery deadline will allow us to give a more accurate response.',
+    'form.file.label': 'Attach Drawing / File',
+    'form.file.hint': 'PDF, DWG, DXF, JPG, PNG, ZIP accepted (optional)',
     'form.submit': 'Submit Inquiry',
     'notice.col.num': 'No.', 'notice.col.title': 'Title',
     'notice.col.author': 'Author', 'notice.col.date': 'Date', 'notice.col.views': 'Views',
