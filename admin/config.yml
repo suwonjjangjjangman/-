@@ -20,7 +20,8 @@ collections:
             widget: list
             fields:
               - { label: 제목, name: title, widget: string }
-              - { label: 내용 요약, name: summary, widget: string }
+              - { label: 내용 요약 (목록에 표시), name: summary, widget: string }
+              - { label: 본문 (사진·내용 자유 작성), name: body, widget: markdown, required: false }
               - { label: 작성자, name: author, widget: string, default: 관리자 }
               - { label: 날짜, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
               - { label: 상단 고정 공지, name: pinned, widget: boolean, default: false }

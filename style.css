@@ -1190,12 +1190,134 @@ html[lang="en"] .en-sub { display: none; }
 .nt-title {
     color: var(--clr-navy);
     font-weight: 500;
+}
+
+.notice-row {
     cursor: pointer;
 }
 
-.nt-title:hover {
+.notice-row:hover .nt-title {
     color: var(--clr-gold);
     text-decoration: underline;
+}
+
+.notices-footer {
+    text-align: right;
+    margin-top: 1.5rem;
+}
+
+.btn-sm {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+}
+
+/* Notice Modal */
+.notice-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.notice-modal.is-open {
+    display: flex;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.notice-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.notice-modal-box {
+    position: relative;
+    background: white;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 760px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.notice-modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--clr-text-light);
+    cursor: pointer;
+}
+
+.notice-modal-close:hover {
+    color: var(--clr-navy);
+}
+
+.notice-modal-header {
+    border-bottom: 2px solid var(--clr-border);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.notice-modal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-navy);
+    margin-bottom: 0.4rem;
+}
+
+.notice-modal-meta {
+    font-size: 0.85rem;
+    color: var(--clr-text-light);
+}
+
+.notice-modal-body {
+    line-height: 1.8;
+    color: var(--clr-text);
+}
+
+.notice-modal-body img {
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    margin: 1rem 0;
+}
+
+.notice-modal-body h2,
+.notice-modal-body h3 {
+    color: var(--clr-navy);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.notice-modal-body p {
+    margin-bottom: 1rem;
+}
+
+.notice-modal-body a {
+    color: var(--clr-gold);
+    text-decoration: underline;
+}
+
+.notice-modal-body hr {
+    border: none;
+    border-top: 1px solid var(--clr-border);
+    margin: 1.5rem 0;
+}
+
+.notice-modal-body ul,
+.notice-modal-body ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .nt-auth,
